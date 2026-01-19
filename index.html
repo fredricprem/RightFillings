@@ -3,6 +3,18 @@
 <head>
 <meta charset="UTF-8">
 
+<!-- SEO -->
+<title>RightFillings | Business & Legal Services</title>
+<meta name="description" content="RightFillings provides professional business, trademark, and compliance services with trusted expertise.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico">
+
+<!-- Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <!-- SEO META -->
 <title>Trademark Registration in India | RightFillings</title>
 <meta name="description" content="Register your trademark with experienced IP law professionals. ₹10,000 + Govt Fees. End-to-end trademark registration support in India.">
@@ -614,5 +626,116 @@ function scrollToForm(){formCard.scrollIntoView({behavior:'smooth'})}
 window.addEventListener('scroll',()=>floatingBtn.classList.toggle('hidden',scrollY<400))
 </script>
 
+<style>
+  /* Divider */
+  .footer-divider {
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 40px 0 15px;
+  }
+
+  /* Footer fade-in */
+  footer {
+    animation: fadeIn 1.2s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Scroll to top */
+  #topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background: #222;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+  }
+
+  #topBtn:hover {
+    background: #000;
+  }
+
+  /* FRED hybrid glow */
+  .fred-signature {
+    font-weight: 600;
+    color: #555;
+    text-shadow: 0 0 4px rgba(255, 215, 0, 0.35);
+  }
+
+  @media (hover: hover) {
+    .fred-signature {
+      text-shadow: none;
+      transition: text-shadow 0.4s ease;
+    }
+
+    .fred-signature:hover {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    }
+  }
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #0f0f0f;
+      color: #ddd;
+    }
+
+    .footer-divider {
+      background: #333;
+    }
+
+    .fred-signature {
+      color: #ccc;
+    }
+
+    #topBtn {
+      background: #444;
+    }
+  }
+</style>
+
+<!-- Scroll to top button -->
+<button id="topBtn" onclick="scrollToTop()">↑</button>
+
+<footer style="text-align:center; font-size:12px; color:#777;">
+  <div class="footer-divider"></div>
+
+  <p>
+    © <span id="year"></span> RightFillings. All rights reserved.
+  </p>
+
+  <p>
+    Website crafted with care by
+    <span class="fred-signature">FRED 🦸‍♂️</span>
+  </p>
+</footer>
+
+<script>
+  // Auto year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Scroll button
+  const btn = document.getElementById("topBtn");
+  window.onscroll = function () {
+    btn.style.display = window.scrollY > 300 ? "block" : "none";
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
 </body>
+<style>
+
 </html>
